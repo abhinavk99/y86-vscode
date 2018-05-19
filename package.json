@@ -2,7 +2,7 @@
     "name": "y86-vscode",
     "displayName": "Y86 Syntax Highlighter",
     "description": "Syntax Highlighter for the Y86 assembly language",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "abhinavk99",
     "engines": {
         "vscode": "^1.23.0"
@@ -15,16 +15,25 @@
         "url": "git+https://github.com/abhinavk99/y86-vscode.git"
     },
     "contributes": {
-        "languages": [{
-            "id": "y86",
-            "aliases": ["Y86", "y86"],
-            "extensions": [".ys"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "y86",
-            "scopeName": "source.y86",
-            "path": "./syntaxes/y86.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "y86",
+                "aliases": [
+                    "Y86",
+                    "y86"
+                ],
+                "extensions": [
+                    ".ys"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "y86",
+                "scopeName": "source.y86",
+                "path": "./syntaxes/y86.tmLanguage.json"
+            }
+        ]
     }
 }
