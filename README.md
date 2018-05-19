@@ -1,4 +1,4 @@
-# y86-vscode
+# Y86 Syntax Highlighter
 
 Y86 syntax highlighter for Visual Studio Code. Install it [here](https://marketplace.visualstudio.com/items?itemName=abhinavk99.y86-vscode)!
 
