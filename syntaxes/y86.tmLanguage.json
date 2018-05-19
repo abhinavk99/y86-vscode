@@ -1,0 +1,124 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Y86",
+	"fileTypes": [
+		"ys"
+	],
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#registers"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#entities"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#support"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.jump.y86",
+					"match": "\\b(jmp|jle|jl|je|jne|jge|jg)\\b"
+				},
+				{
+					"name": "keyword.operator.conditional-move.y86",
+					"match": "\\bcmov(le|l|e|ne|ge|g)\\b"
+				},
+				{
+					"name": "keyword.control.transfer.y86",
+					"match": "\\b(call|ret)\\b"
+				},
+				{
+					"name": "keyword.operator.stack.y86",
+					"match": "\\b(push|pop)(q|l)\\b"
+				},
+				{
+					"name": "keyword.operator.move.y86",
+					"match": "\\b(rr|ir|rm|mr)mov(q|l)\\b"
+				},
+				{
+					"name": "keyword.operator.arithemic.y86",
+					"match": "\\b(add|sub|and|xor)(q|l)\\b"
+				},
+				{
+					"name": "keyword.operator.basic.y86",
+					"match": "\\b(halt|nop)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.y86",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.y86",
+					"match": "\\\\."
+				}
+			]
+		},
+		"registers": {
+			"patterns": [
+				{
+					"name": "constant.language.named-registers.y86",
+					"match": "%(r|e)([a-d]x|[sd]i|[sb]p)"
+				},
+				{
+					"name": "constant.language.numbered-registers.y86",
+					"match": "%r([8-9]|1[0-5])"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.number-sign.y86",
+					"match": "#.*$"
+				}
+			]
+		},
+		"entities": {
+			"patterns": [
+				{
+					"name": "entity.name.function.y86",
+					"match": "^[^#]*:"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.literal.y86",
+					"match": "\\$(0x)?-?[0-9,a-f,A-F]*"
+				},
+				{
+					"name": "constant.numeric.hex.y86",
+					"match": "0x-?[0-9,a-f,A-F]*"
+				}
+			]
+		},
+		"support": {
+			"patterns": [
+				{
+					"name": "support.type.directive.y86",
+					"match": "[.](pos|align|long|quad)"
+				}
+			]
+		}
+	},
+	"scopeName": "source.y86"
+}
