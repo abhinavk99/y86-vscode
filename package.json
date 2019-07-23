@@ -12,7 +12,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/abhinavk99/y86-vscode.git"
+        "url": "https://github.com/abhinavk99/y86-vscode.git"
     },
     "contributes": {
         "languages": [
