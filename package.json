@@ -2,7 +2,7 @@
     "name": "y86-vscode",
     "displayName": "Y86 Syntax Highlighter",
     "description": "Syntax Highlighter for the Y86 assembly language",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "abhinavk99",
     "engines": {
         "vscode": "^1.23.0"
